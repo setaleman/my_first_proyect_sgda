@@ -3,6 +3,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller.js';
 import { AppService } from './app.service.js';
 import { UsersModule } from './users/users.module.js';
+import { AuthModule } from './auth/auth.module.js';
 
 // export const { ObserveModule, ObserveInstrument } = createObserveModule();
 
@@ -15,7 +16,8 @@ import { UsersModule } from './users/users.module.js';
       serviceId: 'my_first_proyect_sgda',
     }),
     */
-  UsersModule],
+  UsersModule,
+    AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })
